@@ -1,6 +1,6 @@
 # is-lab-1
 
-Spring
+testSpring
 
 <img width="256" height="256" alt="image" src="https://github.com/user-attachments/assets/bb1be401-d101-4ff5-b400-4c0e5521cdbe" />
 
