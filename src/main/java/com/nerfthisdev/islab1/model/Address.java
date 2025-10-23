@@ -23,5 +23,27 @@ public class Address {
     private Location town;
 
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public Location getTown() {
+        return town;
+    }
+
+    public void setTown(Location town) {
+        this.town = town;
+    }
 }

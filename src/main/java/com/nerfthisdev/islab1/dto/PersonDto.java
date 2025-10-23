@@ -1,35 +1,16 @@
-package com.nerfthisdev.islab1.model;
+package com.nerfthisdev.islab1.dto;
 
 import com.nerfthisdev.islab1.model.enums.Color;
 import com.nerfthisdev.islab1.model.enums.Country;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 
-@Entity
-@Table(name = "persons")
-public class Person {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Enumerated(EnumType.STRING)
-    private Color eyeColor; // nullable
-
-    @Enumerated(EnumType.STRING)
-    @NotNull
-    private Color hairColor;
-
-    @ManyToOne(optional = true, cascade = CascadeType.ALL)
-    @JoinColumn(name = "location_id")
-    private Location location; // nullable
-
-    @Min(1)
-    private Integer height; // nullable, but if present >0
-
-    @Enumerated(EnumType.STRING)
-    @NotNull
-    private Country nationality;
-
+public class PersonDto {
+    public Long id;
+    public Color eyeColor;      // nullable
+    public @NotNull Color hairColor;
+    public LocationDto location; // nullable
+    public Integer height;      // nullable
+    public @NotNull Country nationality;
 
     public Long getId() {
         return id;
@@ -55,11 +36,11 @@ public class Person {
         this.hairColor = hairColor;
     }
 
-    public Location getLocation() {
+    public LocationDto getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(LocationDto location) {
         this.location = location;
     }
 
@@ -79,4 +60,3 @@ public class Person {
         this.nationality = nationality;
     }
 }
-

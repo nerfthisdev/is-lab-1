@@ -38,6 +38,62 @@ public class Organization {
     @NotNull
     private Address postalAddress;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Address getOfficialAddress() {
+        return officialAddress;
+    }
+
+    public void setOfficialAddress(Address officialAddress) {
+        this.officialAddress = officialAddress;
+    }
+
+    public int getAnnualTurnover() {
+        return annualTurnover;
+    }
+
+    public void setAnnualTurnover(int annualTurnover) {
+        this.annualTurnover = annualTurnover;
+    }
+
+    public int getEmployeesCount() {
+        return employeesCount;
+    }
+
+    public void setEmployeesCount(int employeesCount) {
+        this.employeesCount = employeesCount;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public OrganizationType getType() {
+        return type;
+    }
+
+    public void setType(OrganizationType type) {
+        this.type = type;
+    }
+
+    public Address getPostalAddress() {
+        return postalAddress;
+    }
+
+    public void setPostalAddress(Address postalAddress) {
+        this.postalAddress = postalAddress;
+    }
+
     // getters/setters
     // ...
 }

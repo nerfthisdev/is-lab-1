@@ -1,30 +1,17 @@
-package com.nerfthisdev.islab1.model;
+package com.nerfthisdev.islab1.dto;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+public class LocationDto {
+    public Long id;
+    public double x;
+    public long y;
+    public Double z;
+    public String name;
 
-@Entity
-@Table(name = "locations")
-public class Location {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-
-    private double x;
-    private long y;
-
-    @NotNull
-    private Double z;
-
-    @NotNull
-    private String name;
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

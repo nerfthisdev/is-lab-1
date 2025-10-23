@@ -1,3 +1,4 @@
 package com.nerfthisdev.islab1.dto;
 
-public class WorkerUpdateDto extends WorkerCreateDto {}
+public class WorkerUpdateDto extends WorkerCreateDto{
+}
